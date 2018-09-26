@@ -15,7 +15,7 @@ function renderButtons() {
 $("#gifSubmit").on("click", function(event) {
     event.preventDefault();
     var newGif = $("#gifInput").val().trim();
-    if ($.inArray(newGif, topics) === -1) {
+    if ($.inArray(newGif, topics) === -1 && newGif != "") {
         topics.push(newGif);
         renderButtons();
         $("#gifInput").val("");
